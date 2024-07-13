@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  PrivacyAuditFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: main.lambda_handler
+      Runtime: python3.8
+      CodeUri: ../serverless_functions/lambda.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          PARAM1: 'value1'
+      Events:
+        AuditEndpoint:
+          Type: Api
+          Properties:
+            Path: /audit
+            Method: post
+  PrivacyAuditTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      TableName: PrivacyAuditTable
+      AttributeDefinitions:
+        - AttributeName: url
+          AttributeType: S
+      KeySchema:
+        - AttributeName: url
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
