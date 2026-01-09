@@ -1,12 +1,11 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
+.venv/
 venv/
-
-# Node
-node_modules
-*.log
-
-# AWS
-.aws-sam/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.db
+*.sqlite
+*.zip
+coverage.xml
+htmlcov/

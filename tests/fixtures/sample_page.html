@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DataGuardian Sample Page</title>
+  <link rel="stylesheet" href="https://cdn.example.com/styles/base.css">
+  <script src="https://www.googletagmanager.com/gtm.js?id=GTM-TEST"></script>
+  <script src="https://www.google-analytics.com/analytics.js"></script>
+  <script src="https://cdn.segment.com/analytics.js/v1/sample/analytics.min.js"></script>
+  <script src="/static/js/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Privacy Audit Fixture</h1>
+    <p>This page contains a mix of first-party and third-party resources.</p>
+  </header>
+
+  <section id="hero">
+    <img src="https://images.example.com/hero.jpg" alt="Hero">
+    <img src="https://connect.facebook.net/en_US/fbevents.js" alt="Meta Pixel">
+  </section>
+
+  <section id="content">
+    <h2>Latest Updates</h2>
+    <p>Sample content block for auditing.</p>
+    <iframe src="https://doubleclick.net/activity" title="Ad frame"></iframe>
+  </section>
+
+  <section id="list">
+    <h2>Content Listing</h2>
+    <ul>
+      <li>Item 1: <a href="https://example.com/blog/1">Story</a></li>
+      <li>Item 2: <a href="https://example.com/blog/2">Story</a></li>
+      <li>Item 3: <a href="https://example.com/blog/3">Story</a></li>
+      <li>Item 4: <a href="https://example.com/blog/4">Story</a></li>
+      <li>Item 5: <a href="https://example.com/blog/5">Story</a></li>
+    </ul>
+  </section>
+
+  <section id="cards">
+    <h2>Cards</h2>
+    <div class="card">
+      <h3>Card 1</h3>
+      <p>Details about card 1.</p>
+      <img src="https://cdn.tracker.example.com/track/pixel.png" alt="Tracker">
+    </div>
+    <div class="card">
+      <h3>Card 2</h3>
+      <p>Details about card 2.</p>
+      <img src="https://analytics.example.net/pixel.gif" alt="Pixel">
+    </div>
+    <div class="card">
+      <h3>Card 3</h3>
+      <p>Details about card 3.</p>
+      <img src="/static/images/card3.png" alt="Local">
+    </div>
+  </section>
+
+  <section id="grid">
+    <h2>Audit Grid</h2>
+    <div class="row">
+      <div class="cell">Row 1, Cell 1</div>
+      <div class="cell">Row 1, Cell 2</div>
+      <div class="cell">Row 1, Cell 3</div>
+    </div>
+    <div class="row">
+      <div class="cell">Row 2, Cell 1</div>
+      <div class="cell">Row 2, Cell 2</div>
+      <div class="cell">Row 2, Cell 3</div>
+    </div>
+    <div class="row">
+      <div class="cell">Row 3, Cell 1</div>
+      <div class="cell">Row 3, Cell 2</div>
+      <div class="cell">Row 3, Cell 3</div>
+    </div>
+  </section>
+
+  <section id="profiles">
+    <h2>User Profiles</h2>
+    <article>
+      <h3>Avery</h3>
+      <p>Prefers private browsing and limits ad personalization.</p>
+      <img src="https://clarity.ms/tag/clarity.js" alt="Clarity">
+    </article>
+    <article>
+      <h3>Jordan</h3>
+      <p>Uses opt-out preferences for analytics.</p>
+      <img src="https://hotjar.com/c/hotjar-123.js" alt="Hotjar">
+    </article>
+    <article>
+      <h3>Casey</h3>
+      <p>Turns on two-factor authentication for privacy-focused apps.</p>
+    </article>
+  </section>
+
+  <section id="logs">
+    <h2>Change Log</h2>
+    <pre>
+2024-06-01: Added new consent banner.
+2024-06-15: Updated analytics integration.
+2024-07-04: Removed deprecated pixel tracker.
+2024-07-20: Added new marketing pixel tests.
+2024-08-11: Updated retention policy documentation.
+2024-09-03: Deployed cookie policy enhancements.
+2024-09-24: Added audit score explanations.
+2024-10-10: Migrated analytics tag to GTM.
+2024-10-25: Updated privacy checklist.
+2024-11-05: Added security headers scanning.
+    </pre>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details>
+      <summary>Why are trackers listed?</summary>
+      <p>Trackers are derived from known analytics or keyword matches in HTML.</p>
+    </details>
+    <details>
+      <summary>How do you store audits?</summary>
+      <p>DataGuardian stores audit results in a local SQLite database for repeatable testing.</p>
+    </details>
+  </section>
+
+  <section id="repeat">
+    <h2>Repeated Content for Load</h2>
+    <div class="repeat-block">
+      <p>Block 1: Sample copy for deterministic HTML length.</p>
+      <a href="https://tiktok.com/pixel?id=123" rel="nofollow">Marketing Link</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 2: Sample copy for deterministic HTML length.</p>
+      <a href="https://snapchat.com/pixel?id=456" rel="nofollow">Marketing Link</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 3: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/marketing">Marketing Link</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 4: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/resources">Resources</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 5: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/privacy">Privacy</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 6: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/support">Support</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 7: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/contact">Contact</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 8: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/help">Help</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 9: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/pricing">Pricing</a>
+    </div>
+    <div class="repeat-block">
+      <p>Block 10: Sample copy for deterministic HTML length.</p>
+      <a href="https://example.com/roadmap">Roadmap</a>
+    </div>
+  </section>
+
+  <section id="extended">
+    <h2>Extended Details</h2>
+    <p>This section repeats to expand the fixture for integration testing.</p>
+    <p>Audit row 1: Data retention policy flagged for review.</p>
+    <p>Audit row 2: Cookie policy updated to include region-specific requirements.</p>
+    <p>Audit row 3: Consent dialog adjusted for new analytics script.</p>
+    <p>Audit row 4: Added new marketing consent option.</p>
+    <p>Audit row 5: Removed deprecated tracker.</p>
+    <p>Audit row 6: Verified data export functionality.</p>
+    <p>Audit row 7: Confirmed opt-out request workflow.</p>
+    <p>Audit row 8: Enabled audit log download feature.</p>
+    <p>Audit row 9: Added privacy SLA details.</p>
+    <p>Audit row 10: Updated vendor disclosure list.</p>
+  </section>
+
+  <footer>
+    <p>Footer content for the DataGuardian sample page.</p>
+    <img src="https://mixpanel.com/track/?data=abc" alt="Mixpanel">
+  </footer>
+</body>
+</html>
