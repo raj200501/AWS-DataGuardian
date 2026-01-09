@@ -1,17 +1,14 @@
-import requests
-from bs4 import BeautifulSoup
+from dataguardian.audit import AuditEngine
 
-def perform_privacy_audit(url):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    
-    # Analyze the webpage for privacy risks (e.g., tracking scripts, cookies)
-    trackers = soup.find_all(src=lambda x: x and 'tracker' in x)
-    cookies = response.cookies.get_dict()
 
-    audit_result = {
-        "trackers": len(trackers),
-        "cookies": len(cookies),
-        "url": url
+def perform_privacy_audit(url: str):
+    """Backwards-compatible wrapper used by the Lambda handler."""
+
+    engine = AuditEngine()
+    result = engine.audit(url=url)
+    return {
+        "trackers": result.trackers,
+        "cookies": result.cookies,
+        "third_party_domains": result.third_party_domains,
+        "risk_score": result.risk_score,
     }
-    return audit_result

@@ -1,0 +1,2 @@
+# DataGuardian local runtime uses only Python standard library.
+# Optional AWS usage can install boto3 separately if needed.
